@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+@font-face {
+    font-family:'ClashDisplay' ;
+    src: url('Fonts\TTF\ClashDisplay-Variable.ttf');
+}
+
+body{
+    background-image: url(bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ensure the body matches the viewport height */ 
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+    /* height: 90vh; */
+    height: 900px;
+    width: auto;
+}
+/* Done animating  */
+#entireThumb{ 
+    transition: all;
+}
+ 
+.animationHand{ 
+    animation: animationHand 2s ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+ 
+@keyframes animationHand {
+    0%{
+        transform: rotatey(0deg);
+    }
+    50%{
+        transform: rotateZ(20deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+
+/* ID is pumDark, have to give class to aniamtion  */
+
+
+
+
+.pumDark{
+    animation: pumDark 2s ease-in-out;
+    transform-origin: right center;
+}
+
+@keyframes pumDark {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(0.95);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.StopButton{
+    animation: StopButton 2s ease-in-out;
+    transform-origin: left center;
+}
+
+@keyframes StopButton {
+    0%{
+        transform: scaleY(1);
+    }
+
+    50%{
+        transform: scaleY(0.95);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+.clock{
+    animation: clock 2s ease-in-out;
+    transform-origin: left center;
+}
+
+@keyframes clock {
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0.99);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.circle{
+    position: absolute;
+    justify-items: center;
+    margin-left: 42px;
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+    background-color: rgb(248, 248, 248);
+    color: black;
+    z-index: 1;
+}
+p{
+    margin-top: 100px;
+    margin-left: 8px;
+    justify-items: center;
+    position: absolute;
+    font-size: 80px;
+    font-family: 'Clash Display'; 
+    font-weight: 600;
+    color: #ee6047;
+}
